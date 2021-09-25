@@ -1,0 +1,25 @@
+{% include './layout/layout.html' %}
+
+{% block content %}
+	<div class="container">
+		<form action="/create" method="post">
+			<input type="text" placeholder="Título" name="title" >
+			<input type="text" placeholder="Autor" name="author">
+			<button>Cadastrar</button>
+		</form>
+		
+		<div class="class-list">
+			<ul>
+				{% for item in books %}
+					<li style="list-style: none; border-bottom: 1px solid #000; margin-top: 10px;">
+						<h3>{{ item.title }}</h3>
+						<p>{{ item.author }}</p>
+						<a href="/remove/{{ item._id }}">Deletar</a>
+						<a href="/edit/{{ item._id }}">Editar</a>
+					</li>
+				{% endfor %}
+				
+			</ul>
+		</div>
+	</div>
+{% endblock %}

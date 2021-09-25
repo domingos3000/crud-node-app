@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{{ titleAba }}</title>
+		<link rel="stylesheet" href="/styles/boot.css">
+		
+		{% block styles %}{% endblock %}
+	</head>
+	<body>
+		
+		<!-- {% include '../partials/header.html' %} -->
+		
+		<main id="main">
+			{% block content %}{% endblock %}
+		</main>
+		
+		<!-- {# {% include '../partials/footer.html' %} #} -->
+		
+		{% block scripts %}{% endblock %}
+		
+	</body>
+</html>

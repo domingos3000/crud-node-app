@@ -1,0 +1,6 @@
+<form action="/edit" method="POST">
+	<input type="text" name="editetitle" value="{{ book.title }}">
+	<input type="text" name="editeauthor" value="{{ book.author }}">
+	<input type="hidden" name="editeid" value="{{ book._id }}">
+	<button>Editar</button>
+</form>
